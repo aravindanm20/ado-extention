@@ -1,0 +1,50 @@
+{
+    "manifestVersion": 1,
+    "id": "ai-epic-creator",
+    "name": "AI Epic Creator",
+    "version": "1.0.0",
+    "publisher": "priyaselvaraj1714", 
+    "description": "Uses a custom AI endpoint to generate and create new Epics.",
+    "categories": [
+    "Azure Boards"
+     ],
+    "targets": [
+      {
+        "id": "Microsoft.VisualStudio.Services"
+      }
+    ],
+    "scopes": [
+      "vso.work_write" 
+    ],
+    "icons": {
+      "default": "images/logo.png"
+    },
+    "files": [
+      { "path": "main.html", "addressable": true },
+      { "path": "main.js", "addressable": true },
+      { "path": "lib", "addressable": true },
+      { "path": "images", "addressable": true }
+    ],
+    "contributions": [
+      {
+        "id": "ai-epic-creator-action",
+        "type": "ms.vss-web.action",
+        "description": "Create Epic with AI",
+        "targets": [
+          "ms.vss-work-web.work-item-toolbar-menu" 
+        ],
+        "properties": {
+          "text": "New Epic with AI 🤖",
+          "title": "Create a new Epic using AI suggestions",
+          "icon": "images/icon.png",
+          "group": "new",
+          "uri": "main.html",
+          "opensModal": true,
+          "modalConfiguration": {
+            "width": 800,
+            "height": 600
+          }
+        }
+      }
+    ]
+  }

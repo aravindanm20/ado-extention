@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Epic with AI</title>
+    <link rel="stylesheet" href="lib/vss-ui/vss-ui.css" />
+    <script src="lib/VSS.SDK.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Generate a New Epic</h2>
+        <p>Enter a use case or description below, and our AI will generate the Epic details.</p>
+        
+        <div class="form-group">
+            <label for="useCaseInput">Use Case Description:</label>
+            <textarea id="useCaseInput" rows="5" style="width: 95%;"></textarea>
+        </div>
+        <button id="generateBtn" class="cta">Generate Details</button>
+
+        <hr>
+
+        <h3>Generated Epic Details</h3>
+<div class="form-group">
+    <label for="epicTitle">Title:</label>
+    <input type="text" id="epicTitle" style="width: 95%;">
+</div>
+<div class="form-group">
+    <label for="epicDescription">Description (HTML):</label>
+    <textarea id="epicDescription" rows="8" style="width: 95%;"></textarea>
+</div>
+ <div class="form-group">
+    <label for="epicAcceptanceCriteria">Acceptance Criteria (HTML):</label>
+    <textarea id="epicAcceptanceCriteria" rows="5" style="width: 95%;"></textarea>
+</div>
+
+<button id="saveBtn" class="cta primary" disabled>Save Epic</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
